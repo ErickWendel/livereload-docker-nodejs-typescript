@@ -1,0 +1,21 @@
+{
+  "name": "docker-js-livereload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx typescript",
+    "build:watch": "npx typescript -w",
+    "live-reload": "npx concurrently \"npm run build:watch\" \"npm run dev\"",
+    "dev": "npx nodemon bin/Index.js"
+  },
+  "keywords": [],
+  "author": "erickwendel",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.7.7",
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2",
+    "typescript": "^3.8.3"
+  }
+}
