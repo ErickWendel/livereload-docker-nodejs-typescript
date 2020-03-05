@@ -7,7 +7,6 @@ services:
     environment: 
       FRONT_PORT: 8080
       BACK_PORT: 3000
-    # working_dir: /src
     volumes:
       - .:/src
       - nodemodules:/src/node_modules
