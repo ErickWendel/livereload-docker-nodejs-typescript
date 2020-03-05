@@ -4,7 +4,11 @@ services:
   docker-js-livereload:
     image: docker-js-livereload
     build: .
+    environment: 
+      FRONT_PORT: 8080
+      BACK_PORT: 3000
     volumes:
       - ./:/src/
     ports:
       - 3000:3000
+      - 8080:8080

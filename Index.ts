@@ -1,10 +1,19 @@
+import Http from 'http'
+import Io from 'socket.io'
+
+const server = Http.createServer();
+const io = Io(server);
+const PORT = process.env.BACK_PORT || 3000
 
 
-async function main() {
-    setInterval(() => {
-        console.log('ae2', new Date())
-    }, 500)    
-    
-}
 
-main()
+io.on('connection', client =>
+    /*
+    'happy.jpg', 
+    'sad.jpg', 
+    'fuck.jpg'
+    */
+    client.emit("change-pic", `./resources/sad.jpg`)
+);
+server.listen(PORT);
+console.log('listening at', PORT)
