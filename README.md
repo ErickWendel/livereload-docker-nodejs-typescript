@@ -7,3 +7,6 @@
 ## What
 
 - This project will show how to use live reload functions by using a build process as an example. It uses Typescript and after each change, the Typescript must rebuild and the nodemon must reload to apply the changes. All of it, happens using only a command such as `docker-compose up`.
+
+## Plus
+- You can also, using VSCode, press F5 and debugg your code through Docker :)
