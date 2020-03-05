@@ -9,6 +9,8 @@ services:
       BACK_PORT: 3000
     volumes:
       - ./:/src/
+      - src/node_modules
+      - src/bin
     ports:
       - 3000:3000
       - 8080:8080

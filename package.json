@@ -6,22 +6,22 @@
   "scripts": {
     "build": "npx typescript",
     "build:watch": "npx typescript -w",
-    "dev:front": "http-server -p $FRONT_PORT .",
-    "live-reload": "npx concurrently \"npm run build:watch\" \"npm run dev\" \"npm run dev:back\" \"npm run dev:front\" ",
+    "dev:front": "npx http-server -p $FRONT_PORT .",
+    "live-reload": "npx concurrently \"npm run build:watch\"  \"npm run dev:back\" \"npm run dev:front\" ",
     "dev:back": "npx nodemon bin/Index.js"
   },
   "keywords": [],
   "author": "erickwendel",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^13.7.7",
-    "concurrently": "^5.1.0",
-    "nodemon": "^2.0.2",
-    "typescript": "^3.8.3"
+    "@types/node": "13.7.7",
+    "@types/socket.io": "2.1.4",
+    "concurrently": "5.1.0",
+    "nodemon": "2.0.2",
+    "typescript": "3.8.3",
+    "http-server": "0.12.1"
   },
   "dependencies": {
-    "@types/socket.io": "^2.1.4",
-    "http-server": "^0.12.1",
     "socket.io": "^2.3.0"
   }
 }

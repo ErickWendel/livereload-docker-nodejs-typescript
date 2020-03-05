@@ -13,7 +13,7 @@ io.on('connection', client =>
     'sad.jpg', 
     'fuck.jpg'
     */
-    client.emit("change-pic", `./resources/sad.jpg`)
+    client.emit("change-pic", `./resources/happy.jpg`)
 );
 server.listen(PORT);
 console.log('listening at', PORT)

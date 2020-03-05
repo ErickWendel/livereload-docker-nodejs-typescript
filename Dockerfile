@@ -1,10 +1,10 @@
 FROM node:12-alpine
 
-WORKDIR /src
+WORKDIR /src/
 
-COPY ["package.json", "package-lock.json*", "/src/"]
+COPY package.json package-lock.json /src/
 
-RUN npm i --silent
+RUN  npm ci --silent
 
 COPY . .
 
