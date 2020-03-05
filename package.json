@@ -7,7 +7,7 @@
     "build": "npx typescript",
     "build:watch": "npx typescript -w",
     "dev:front": "npx http-server -p $FRONT_PORT .",
-    "live-reload": "npx concurrently \"npm run build:watch\"  \"npm run dev:back\" \"npm run dev:front\" ",
+    "live-reload": "npm run build && npx concurrently \"npm run build:watch\"  \"npm run dev:back\" \"npm run dev:front\" ",
     "dev:back": "npx nodemon bin/Index.js"
   },
   "keywords": [],
