@@ -8,6 +8,4 @@ RUN  npm ci --silent
 
 COPY . .
 
-RUN npm run build
-
 CMD npm run live-reload
